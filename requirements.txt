@@ -1,3 +1,21 @@
 pandas
 requests
 pytz
+
+
+import pandas as pd
+
+df =pd.read_csv("consolidated_rb_oi.csv")
+df['Month']=pd.to_datetime(df['Month'],format='%b %y').dt.strftime('%Y-%m')
+
+piv_tab_oi=pd.pivot(df, values='At Close',index='Month', columns='Trade Day')
+piv_tab_oi.sort_index(axis=1, ascending=False, inplace=True)
+
+
+In [41]: datetime.datetime.now()+datetime.timedelta(days=-2)
+Out[41]: datetime.datetime(2020, 4, 26, 17, 49, 12, 547535)
+
+In [42]: (datetime.datetime.now()+datetime.timedelta(days=-2)).strftime('%y%m%d')
+Out[42]: '200426'
+
+In [43]: 
