@@ -1,5 +1,27 @@
 {
-  "resources": [],
+  "resources": [
+    {
+      "name": "default-role",
+      "resource_type": "iam_role",
+      "role_arn": "arn:aws:iam::773057190048:role/scraper-dev",
+      "role_name": "scraper-dev"
+    },
+    {
+      "name": "index",
+      "resource_type": "lambda_function",
+      "lambda_arn": "arn:aws:lambda:us-east-1:773057190048:function:scraper-dev-index"
+    },
+    {
+      "name": "cron_handler",
+      "resource_type": "lambda_function",
+      "lambda_arn": "arn:aws:lambda:us-east-1:773057190048:function:scraper-dev-cron_handler"
+    },
+    {
+      "name": "cron_handler-event",
+      "resource_type": "cloudwatch_event",
+      "rule_name": "scraper-dev-cron_handler-event"
+    }
+  ],
   "schema_version": "2.0",
   "backend": "api"
 }
