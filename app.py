@@ -10,7 +10,14 @@ prod_dict={
         'rb':'429',
         'ho':'426',
         'cl':'425',
-        'ng':'444'
+        'ng':'444',
+        'zw_wheat':'323',
+        'zc_corn':'300',
+        'zs_soybean':'320',
+        'zm_soymeal':'310',
+        'he_hogs':'19',
+        'le_cattle':'22',
+        'hg_copper':'438'
         }
 utc = pytz.utc
 utc_dt = datetime.datetime.today()
